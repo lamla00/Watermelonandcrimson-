@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8f3044">
+  <title>Watermelon and crimson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="paper-grain"></div>
+  <main class="shell">
+    <section id="authView" class="auth-wrap">
+      <div class="brand-mark">w<span>♥</span>c</div>
+      <p class="eyebrow">A LITTLE CORNER OF THE INTERNET</p>
+      <h1>Watermelon <em>&</em><br>crimson</h1>
+      <p class="intro">Your little private universe.<br>Made for your favourite people.</p>
+      <div class="auth-card">
+        <div class="tabs">
+          <button class="tab active" data-mode="signup">Create account</button>
+          <button class="tab" data-mode="login">Log in</button>
+        </div>
+        <form id="authForm">
+          <label id="usernameLabel">Your username</label>
+          <input id="username" autocomplete="username" placeholder="e.g. littlewatermelon" maxlength="24">
+          <label>Email address</label>
+          <input id="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <label>Password</label>
+          <input id="password" type="password" autocomplete="current-password" placeholder="At least 8 characters" minlength="8" required>
+          <button class="primary full" type="submit" id="authSubmit">Create my account <span>↗</span></button>
+          <p class="fineprint">Private chats are for invited members only. Keep your password to yourself.</p>
+        </form>
+        <p id="authMessage" class="notice" role="status"></p>
+      </div>
+      <p class="tiny-note">EST. WITH FRIENDSHIP · ALWAYS A LITTLE VINTAGE</p>
+    </section>
+
+    <section id="appView" class="app hidden">
+      <aside class="sidebar">
+        <div class="side-brand"><span class="mini-heart">♥</span><div><b>Watermelon<br>& crimson</b><small>your private circle</small></div></div>
+        <div class="profile-strip"><div class="avatar" id="myAvatar">W</div><div class="profile-meta"><b id="myName">Your name</b><small><i class="online-dot"></i> online</small></div><button id="logoutBtn" class="icon-btn" title="Log out">↪</button></div>
+        <div class="side-heading">YOUR SPACES <button id="newGroupBtn" class="small-plus" title="Create group">+</button></div>
+        <div id="conversationList" class="conversation-list">
+          <div class="empty-side">Your conversations will appear here.</div>
+        </div>
+        <div class="side-footer">A softer place to say hello <span>✿</span></div>
+      </aside>
+      <section class="chat-panel">
+        <header class="chat-header">
+          <div><p class="eyebrow" id="chatType">YOUR PRIVATE SPACE</p><h2 id="chatTitle">Welcome in</h2><p id="chatSubtitle" class="chat-subtitle">Choose a conversation to begin.</p></div>
+          <button id="inviteBtn" class="invite-btn">＋ Invite friends</button>
+        </header>
+        <div id="welcomePanel" class="welcome-panel">
+          <div class="watermelon-art">🍉</div>
+          <h2>A little space<br>for your people.</h2>
+          <p>Create a group, invite your friends,<br>and let the conversations bloom.</p>
+          <button class="primary" id="welcomeInvite">Invite your friends ↗</button>
+        </div>
+        <div id="messageArea" class="message-area hidden">
+          <div id="messages" class="messages"></div>
+          <form id="messageForm" class="composer">
+            <button type="button" id="emojiBtn" class="emoji-btn" title="Add emoji">☺</button>
+            <input id="messageInput" maxlength="2000" placeholder="Write something lovely..." autocomplete="off">
+            <button class="send-btn" type="submit">Send ↗</button>
+          </form>
+          <div id="emojiTray" class="emoji-tray hidden"> <button>❤️</button><button>🍉</button><button>✨</button><button>😭</button><button>😂</button><button>🌷</button><button>🫶</button><button>🤍</button> </div>
+        </div>
+      </section>
+    </section>
+    <div id="modal" class="modal hidden">
+      <div class="modal-card">
+        <button id="closeModal" class="modal-close">×</button>
+        <p class="eyebrow" id="modalEyebrow">MAKE A LITTLE SPACE</p>
+        <h2 id="modalTitle">Create a group</h2>
+        <p id="modalDescription" class="modal-desc">Give your group a name your friends will recognise.</p>
+        <form id="modalForm"><label id="modalLabel">Group name</label><input id="modalInput" maxlength="50" placeholder="The Sunday Club" required><button class="primary full" id="modalSubmit">Continue ↗</button></form>
+        <p id="modalMessage" class="notice"></p>
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

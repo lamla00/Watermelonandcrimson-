@@ -1,0 +1,21 @@
+WATERMELON AND CRIMSON — SETUP GUIDE
+
+This is the website starter project. The design is ready. Real multi-person chat requires a Supabase project.
+
+1) Create a free account at https://supabase.com
+2) Create a project. Keep the database password private.
+3) In Supabase, open Project Settings → API.
+4) Copy the Project URL and the anon/public (publishable) key.
+5) Open app.js and replace:
+   PASTE_YOUR_SUPABASE_PROJECT_URL_HERE
+   PASTE_YOUR_SUPABASE_ANON_KEY_HERE
+   Do NOT use the service_role key. Do NOT share passwords or secret keys.
+6) Open SQL Editor in Supabase, choose New query, paste all of supabase-schema.sql, and Run.
+7) For public hosting, create a GitHub account, create a public repository, upload these files, and enable Settings → Pages → Deploy from a branch → main → /(root).
+8) In Supabase Authentication → URL Configuration, add your published website URL to Site URL and Redirect URLs.
+
+IMPORTANT:
+- The visual preview can open without a database, but real accounts/messages cannot.
+- Never make the database public by disabling Row Level Security.
+- Use invite codes only with people you trust.
+- Free plan quotas and provider policies can change.
